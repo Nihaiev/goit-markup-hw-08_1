@@ -24,13 +24,19 @@
           <a href="./index.html" lang="en" class="header__logo link">
             <span class="header__logo--color">Web</span>Studio</a
           >
-          <button type="button" class="header__button is-open" aria-expanded="false" data-menu-button>
+          <button
+            type="button"
+            class="header__button is-open"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
             <svg class="header__button--icon" Width="40" Height="40" aria-label="Переключатель мобильного меню">
               <use class="button--iconclose" href="./images/icons.svg#iconclose"></use>
               <use class="button--iconmenu" href="./images/icons.svg#iconmenu"></use>
             </svg>
           </button>
-          <div class="nav__container" data-menu>Меню контента</div>
+          <div class="nav__container" data-menu id="menu-container">Меню контента</div>
         </nav>
       </div>
     </header>
