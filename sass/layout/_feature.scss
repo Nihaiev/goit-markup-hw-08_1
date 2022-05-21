@@ -1,0 +1,38 @@
+.feature {
+  &__list {
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 450px;
+      height: 120px;
+      background: #f5f4fa;
+      border-radius: 4px;
+      margin-bottom: 30px;
+    }
+    &--text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+
+      letter-spacing: 0.03em;
+
+      color: #757575;
+    }
+    &--title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #212121;
+      margin-bottom: 10px;
+    }
+  }
+}
