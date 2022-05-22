@@ -20,81 +20,72 @@
   <body>
     <header class="header">
       <div class="header__container container">
-                  <a href="./index.html" lang="en" class="logo link">
+      <a href="./index.html" lang="en" class="logo link">
             <span class="logo--color">Web</span>Studio</a
           >
-        <nav class="header__nav">
-          <button
+                    <button
             type="button"
-            class="header__button is-open"
+            class="menu__button is-open"
             aria-expanded="false"
             aria-controls="menu-container"
             data-menu-button
           >
-            <svg class="header__button--icon" Width="40" Height="40" aria-label="Переключатель мобильного меню">
-              <use class="button--iconclose" href="./images/icons.svg#iconclose"></use>
-              <use class="button--iconmenu" href="./images/icons.svg#iconmenu"></use>
+            <svg class="menu__button--icon" Width="40" Height="40" aria-label="Переключатель мобильного меню">
+              <use class="menu__button--iconclose" href="./images/icons.svg#iconclose"></use>
+              <use class="menu__button--iconmenu" href="./images/icons.svg#iconmenu"></use>
             </svg>
           </button>
-          
-        </nav>
-      </div>
-      <!-- mobile-menu -->
-      <div class="mobile-menu__container" data-menu id="menu-container">
-                  <ul class="mobile-menu__list list">
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link current" href="./index.html">Студия</a>
+          <div class="menu__container" id="menu-container" data-menu>
+            
+            <div class="navigation" >
+            <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link link current" href="./index.html">Студия</a>
             </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="./portfolio.html">Портфолио</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="./portfolio.html">Портфолио</a>
             </li>
-            <li class="mobile-menu__item">
-              <a class="mobile-menu__link link" href="#">Контакты</a>
+            <li class="nav__item">
+              <a class="nav__link link" href="#">Контакты</a>
             </li>
           </ul>
-          <ul class="mobile-connect list">
-          <li class="mobile-connect__list">
-            <a class="mobile-connect__link link" href="mailto:info@devstudio.com">
+        </nav>
+            </div>
+            <div class="contacts">
+              <ul class="connect list">
+          <li class="connect__list">
+            <a class="connect__link link" href="mailto:info@devstudio.com">
+              <svg class="connect__icon" Width="16" Height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="mobile-connect__list">
-            <a class="mobile-connect__link link" href="tel:+380961111111">
-+38 096 111 11 11</a
+          <li class="connect__list">
+            <a class="connect__link link" href="tel:+380961111111">
+              <svg class="connect__icon" Width="10" Height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg
+              >+38 096 111 11 11</a
             >
           </li>
         </ul>
-                <ul class="mobile--soc__list list">
-                  <li class="mobile--soc__item">
-                    <a class="mobile--soc__link link" href="#">Instagram
-                    </a>
-                  </li>
-                  <li class="mobile--soc__item">
-                    <a class="mobile--soc__link link" href="#">Twitter
-                    </a>
-                  </li>
-                  <li class="mobile--soc__item">
-                    <a class="mobile--soc__link link" href="#">Facebook
-                    </a>
-                  </li>
-                  <li class="mobile--soc__item">
-                    <a class="mobile--soc__link link" href="#">LinkedIn
-                    </a>
-                  </li>
-                </ul>
-                <button type="button" class="mobile-menu-close">
-                <svg class="menu-close--icon" Width="40" Height="40" >
-              <use class="menu-close--iconclose" href="./images/icons.svg#iconclose"></use>
-            </svg>
-                </button>
+            </div>
+        
+</div>
+        <!-- <nav class="header__nav">
+
+          
+        </nav> -->
       </div>
+
     </header>
     <main>
       <!-- hero-section -->
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="hero__btn">Заказать услугу</button>
+          <button type="button" class="hero__btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- feature-section -->
@@ -374,8 +365,138 @@
           </ul>
         </div>
       </section>
-      <script src="./js/menu.js"></script>
+      
+            <!-- modal-window -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="modal-btn-exit" data-modal-close>
+            <svg class="modal-icon-exit" width="11" height="11">
+              <use href="./images/icons.svg#icon-exit"></use>
+            </svg>
+          </button>
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+          <form>
+            <div class="modal-field">
+              <label class="modal-label" for="user-name">Имя</label>
+              <div class="modal-input-wrap">
+                <input type="text" class="modal-input" name="user-name" required minlength="2" id="user-name" />
+                <svg class="modal-icon" Width="18" Height="18">
+                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="modal-field">
+              <label class="modal-label" for="user-tel">Телефон</label>
+              <div class="modal-input-wrap">
+                <input type="tel" class="modal-input" name="user-tel" id="user-tel" required />
+                <svg class="modal-icon" Width="18" Height="18">
+                  <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="modal-field">
+              <label class="modal-label" for="user-mail">Почта</label>
+              <div class="modal-input-wrap">
+                <input type="email" class="modal-input" name="user-email" id="user-mail" required />
+                <svg class="modal-icon" Width="18" Height="18">
+                  <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="modal-textarea">
+              <label class="modal-label" for="user-text">Комментарий </label>
+              <textarea name="user-text" id="user-text" placeholder="Введите текст" class="modal-text"></textarea>
+            </div>
+            <div class="modal-checkbox">
+              <input
+                type="checkbox"
+                id="input-check"
+                class="input-check visually-hidden"
+                name="policy"
+                value="policy"
+              />
+              <label for="input-check" class="check-text">
+                <span>
+                  <svg class="check-icon" Width="11" Height="8">
+                    <use href="./images/icons.svg#icon-Vector"></use>
+                  </svg>
+                </span>
+                Соглашаюсь с рассылкой и принимаю &nbsp;
+                <a class="check-link" href="#">Условия договора</a>
+              </label>
+            </div>
+            <button type="submit" class="send-btn">Отправить</button>
+          </form>
+        </div>
+      </div>
     </main>
-    <footer class="footer"></footer>
+    <!-- footer -->
+    <!-- <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__contact">
+          <a href="./index.html" lang="en" class="footer__logo link"
+            ><span class="footer__logo--color">Web</span>Studio</a
+          >
+          <address class="footer__address">
+            <ul class="list">
+              <li class="address__list">г. Киев, пр-т Леси Украинки, 26</li>
+              <li class="address__list">
+                <a class="address__list--link link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="address__list">
+                <a class="address__list--link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="soc__column">
+          <strong class="soc__title">присоединяйтесь</strong>
+          <ul class="soc__list list">
+            <li class="soc__item">
+              <a class="soc__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc__item">
+              <a class="soc__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc__item">
+              <a class="soc__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc__item">
+              <a class="soc__link" href="">
+                <svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <strong class="subscribe__title">Подпишитесь на рассылку</strong>
+          <form class="subscribe__form">
+            <input placeholder="E-mail" class="subscribe__input" name="subscribe" />
+            <button type="submit" class="subscribe__btn">
+              Подписаться
+              <svg class="subscribe__btn--icon" Width="24" Height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer> -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

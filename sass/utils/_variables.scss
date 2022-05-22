@@ -1,1 +1,25 @@
-
+:root {
+  --main-color: #2196f3;
+  --header-logo-color: #000000;
+  --typical-white-color: #ffffff;
+  --header-nav-color: #212121;
+  --header-contact-color: #757575;
+  --banner-background-color: #2f303a;
+  --btn-hover: #188ce8;
+  --title-color: #212121;
+  --team-text-color: #757575;
+  --filter-btn-background: #f5f4fa;
+  --filter-btn-text: #212121;
+  --portfolio-title-color: #212121;
+  --portfolio-text-color: #757575;
+  --feature-icons-color: #f5f4fa;
+  --team-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --fillteam-color: #afb1b8;
+  --btn-send-color: #188ce8;
+  --modal-label-color: #757575;
+  --modal-title-color: #212121;
+  --typical-margin: 30px;
+  --typical-time-transition: 250ms;
+  --typical-cubic-bezier: cubic-bezier (0.4, 0, 0.2, 1);
+}
