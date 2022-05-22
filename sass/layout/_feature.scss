@@ -1,10 +1,22 @@
 .feature {
   &__list {
+    margin-bottom: -30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+    }
   }
   &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 768px) {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
     }
+    @media screen and (min-width: 1140px) {
+      width: calc(100% / 4 - 30px);
+    }
+
     &--icon {
       display: flex;
       justify-content: center;
@@ -14,6 +26,12 @@
       background: #f5f4fa;
       border-radius: 4px;
       margin-bottom: 30px;
+      @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+      @media screen and (min-width: 1140px) {
+        width: 270px;
+      }
     }
     &--text {
       font-weight: 400;

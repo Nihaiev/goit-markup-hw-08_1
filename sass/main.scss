@@ -2,10 +2,14 @@
 @import "./base/reset";
 @import "./components/container";
 @import "./components/section";
+@import "./components/title";
 @import "./layout/header";
 @import "./layout/feature";
+@import "./layout/about";
 @import "./layout/team";
+@import "./layout/client";
 @import "./components/hero";
 
 @import "./utils/hidden";
 @import "./utils/variables";
+@import "./utils/mixins";
