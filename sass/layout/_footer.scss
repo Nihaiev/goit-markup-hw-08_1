@@ -3,20 +3,35 @@
   padding-top: 60px;
   padding-bottom: 60px;
   &__container {
-    display: flex;
-    align-items: baseline;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+    }
   }
   &__contact {
-    margin-right: 70px;
+    margin-bottom: 60px;
+    @media screen and (min-width: 768px) {
+      // margin-right: 70px;
+    }
   }
   &__logo {
-    font-family: "Raleway";
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--typical-white-color);
-    margin-bottom: 20px;
     display: block;
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    color: var(--typical-white-color);
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+    }
   }
 }
 
@@ -54,7 +69,8 @@
   }
 }
 .soc__column {
-  margin-right: auto;
+  // margin-right: auto;
+  margin-bottom: 60px;
 }
 
 .soc__title {
@@ -69,6 +85,10 @@
 .soc__list {
   display: flex;
   margin-top: 20px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+  }
 }
 
 .soc__item:not(:last-child) {
@@ -95,6 +115,10 @@
   }
 }
 
+.subscribe {
+  margin-left: auto;
+  margin-right: auto;
+}
 .subscribe__title {
   display: block;
   font-weight: 700;
@@ -107,11 +131,15 @@
 }
 
 .subscribe__form {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    // display: flex;
+  }
 }
 
 .subscribe__input {
-  width: 358px;
+  display: block;
+  // width: 358px;
+  width: 100%;
   font-size: 16px;
   padding: 15px 0px 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -119,8 +147,13 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
-  margin-right: 12px;
+  margin-bottom: 20px;
+  // margin-right: 12px;
   color: var(--typical-white-color);
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    // display: flex;
+  }
 }
 
 .subscribe__btn {
@@ -130,7 +163,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -138,6 +171,11 @@
   color: var(--typical-white-color);
   border: none;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    // margin-left: auto;
+    // margin-right: auto;
+    // display: flex;
+  }
 }
 
 .subscribe__btn--icon {
