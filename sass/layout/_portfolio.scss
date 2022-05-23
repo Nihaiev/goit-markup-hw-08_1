@@ -5,86 +5,92 @@
 }
 
 .portfolio {
-  &__border {
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    padding: 24px 20px 24px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1170px;
+}
+
+.portfolio-item {
+  margin-right: var(--typical-margin);
+  margin-bottom: var(--typical-margin);
+  &:nth-child(3n) {
+    margin-right: 0;
   }
-  &__description-text {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    padding: 63px 24px;
-    background: rgba(33, 150, 243, 0.9);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;
-    color: var(--typical-white-color);
-    transform: translatey(101%);
-    transition-property: transform, background, color;
-    transition-duration: var(--typical-time-transition);
-    transition-timing-function: var(--typical-cubic-bezier);
-    .portfolio-link:hover & {
-      transform: translatey(0);
-    }
-    .portfolio-link:focus & {
-      transform: translatey(0);
-    }
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
   }
-  &__img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+  transition-property: box-shadow;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  &__item {
-    margin-right: var(--typical-margin);
-    margin-bottom: var(--typical-margin);
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
-    }
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-  &__link {
-    display: block;
-    text-decoration: none;
-    transition-property: box-shadow;
-    transition-duration: var(--typical-time-transition);
-    transition-timing-function: var(--typical-cubic-bezier);
-    &:hover {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-    &:focus {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
+}
+
+.portfolio-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-border {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 24px 20px 24px 20px;
+}
+
+.portfolio-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--portfolio-title-color);
+  margin-bottom: 4px;
+}
+
+.portfolio-text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--portfolio-text-color);
+}
+
+.portfolio-overlay {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.portfolio-description-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--typical-white-color);
+  transform: translatey(101%);
+  transition-property: transform, background, color;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
+  .portfolio-link:hover & {
+    transform: translatey(0);
   }
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 1170px;
-  }
-  &__overlay {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-  }
-  &__text {
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
-    color: var(--portfolio-text-color);
-  }
-  &__title {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--portfolio-title-color);
-    margin-bottom: 4px;
+  .portfolio-link:focus & {
+    transform: translatey(0);
   }
 }
