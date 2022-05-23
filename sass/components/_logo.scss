@@ -19,7 +19,10 @@ $base-color: #2196f3;
     padding-top: 24px;
     padding-bottom: 24px;
   }
-  &--color {
+  &--header {
     color: $base-color;
+  }
+  &--footer {
+    color: #ffffff;
   }
 }
