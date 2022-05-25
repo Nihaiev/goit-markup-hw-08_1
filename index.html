@@ -190,15 +190,33 @@
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="about__list list">
             <li class="about__item">
-              <img class="about__img" src="./images/box_1.jpg" alt="Пример кодинга" width="370" />
+              <img
+                class="about__img"
+                srcset="./images/img_(3)-min.jpg 1x, ./images/img_(4)-min.jpg 2x"
+                src="./images/box_1.jpg"
+                alt="Пример кодинга"
+                width="370"
+              />
               <p class="about__text">Десктопные приложения</p>
             </li>
             <li class="about__item">
-              <img class="about__img" src="./images/box_2.jpg" alt="Пример UX дизайна" width="370" />
+              <img
+                class="about__img"
+                srcset="./images/img_(5)-min.jpg 1x, ./images/img_(6)-min.jpg 2x"
+                src="./images/box_2.jpg"
+                alt="Пример UX дизайна"
+                width="370"
+              />
               <p class="about__text">Мобильные приложения</p>
             </li>
             <li class="about__item">
-              <img class="about__img" src="./images/box_3.jpg" alt="Пример подбора палитр" width="370" />
+              <img
+                class="about__img"
+                srcset="./images/img_(13)-min.jpg 1x, ./images/img_(14)-min.jpg 2x"
+                src="./images/box_3.jpg"
+                alt="Пример подбора палитр"
+                width="370"
+              />
               <p class="about__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -252,7 +270,19 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__item--img" src="./images/img2.jpg" alt="Frontend Developer" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img2_pc-min.jpg 1x, ./images/img2_pc_2x-min.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/img2_tab-min.jpg 1x, ./images/img2_tab_2x-min.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source srcset="./images/img2_mob.jpg 1x, ./images/img2_mob_x2.jpg 2x" media="(min-width:480px)" />
+                <img class="team__item--img" src="./images/img2.jpg" alt="Frontend Developer" />
+              </picture>
+
               <div class="team__row">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -289,7 +319,22 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__item--img" src="./images/img3.jpg" alt="Marketing" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img3_pc-min.jpg 1x, ./images/img3_pc_2x-min.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/img3_tab-min.jpg 1x, ./images/img3_tab_2x-min.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/img3_mob-min.jpg 1x, ./images/img3_mob_2x-min.jpg 2x"
+                  media="(min-width:480px)"
+                />
+                <img class="team__item--img" src="./images/img3_mob-min.jpg " alt="Marketing" />
+              </picture>
+
               <div class="team__row">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -326,7 +371,22 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__item--img" src="./images/img4.jpg" alt="UI Designer" width="270" />
+              <picture>
+                <source
+                  srcset="./images/img4_pc-min.jpg 1x, ./images/img4_pc_2x-min.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/img4_tab-min.jpg 1x, ./images/img4_tab_2x-min.jpg2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/img4_mob-min.jpg 1x, ./images/img4_mob_2x-min.jpg 2x"
+                  media="(min-width:480px)"
+                />
+                <img class="team__item--img" src="./images/img4_mob-min.jpg" alt="UI Designer" />
+              </picture>
+
               <div class="team__row">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
@@ -416,70 +476,6 @@
           </ul>
         </div>
       </section>
-
-      <!-- modal-window -->
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button type="button" class="modal-btn-exit" data-modal-close>
-            <svg class="modal-icon-exit" width="11" height="11">
-              <use href="./images/icons.svg#icon-exit"></use>
-            </svg>
-          </button>
-          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
-          <form>
-            <div class="modal-field">
-              <label class="modal-label" for="user-name">Имя</label>
-              <div class="modal-input-wrap">
-                <input type="text" class="modal-input" name="user-name" required minlength="2" id="user-name" />
-                <svg class="modal-icon" Width="18" Height="18">
-                  <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="modal-field">
-              <label class="modal-label" for="user-tel">Телефон</label>
-              <div class="modal-input-wrap">
-                <input type="tel" class="modal-input" name="user-tel" id="user-tel" required />
-                <svg class="modal-icon" Width="18" Height="18">
-                  <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="modal-field">
-              <label class="modal-label" for="user-mail">Почта</label>
-              <div class="modal-input-wrap">
-                <input type="email" class="modal-input" name="user-email" id="user-mail" required />
-                <svg class="modal-icon" Width="18" Height="18">
-                  <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="modal-textarea">
-              <label class="modal-label" for="user-text">Комментарий </label>
-              <textarea name="user-text" id="user-text" placeholder="Введите текст" class="modal-text"></textarea>
-            </div>
-            <div class="modal-checkbox">
-              <input
-                type="checkbox"
-                id="input-check"
-                class="input-check visually-hidden"
-                name="policy"
-                value="policy"
-              />
-              <label for="input-check" class="check-text">
-                <span>
-                  <svg class="check-icon" Width="11" Height="8">
-                    <use href="./images/icons.svg#icon-Vector"></use>
-                  </svg>
-                </span>
-                Соглашаюсь с рассылкой и принимаю &nbsp;
-                <a class="check-link" href="#">Условия договора</a>
-              </label>
-            </div>
-            <button type="submit" class="send-btn">Отправить</button>
-          </form>
-        </div>
-      </div>
     </main>
     <!-- footer -->
     <footer class="footer">
@@ -547,6 +543,63 @@
         </div>
       </div>
     </footer>
+    <!-- modal-window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn-exit" data-modal-close>
+          <svg class="modal-icon-exit" width="11" height="11">
+            <use href="./images/icons.svg#icon-exit"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form>
+          <div class="modal-field">
+            <label class="modal-label" for="user-name">Имя</label>
+            <div class="modal-input-wrap">
+              <input type="text" class="modal-input" name="user-name" required minlength="2" id="user-name" />
+              <svg class="modal-icon" Width="18" Height="18">
+                <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-tel">Телефон</label>
+            <div class="modal-input-wrap">
+              <input type="tel" class="modal-input" name="user-tel" id="user-tel" required />
+              <svg class="modal-icon" Width="18" Height="18">
+                <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-mail">Почта</label>
+            <div class="modal-input-wrap">
+              <input type="email" class="modal-input" name="user-email" id="user-mail" required />
+              <svg class="modal-icon" Width="18" Height="18">
+                <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-textarea">
+            <label class="modal-label" for="user-text">Комментарий </label>
+            <textarea name="user-text" id="user-text" placeholder="Введите текст" class="modal-text"></textarea>
+          </div>
+          <div class="modal-checkbox">
+            <input type="checkbox" id="input-check" class="input-check visually-hidden" name="policy" value="policy" />
+            <label for="input-check" class="check-text">
+              <span>
+                <svg class="check-icon" Width="11" Height="8">
+                  <use href="./images/icons.svg#icon-Vector"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a class="check-link" href="#">Условия договора</a>
+            </label>
+          </div>
+          <button type="submit" class="send-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
