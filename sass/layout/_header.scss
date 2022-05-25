@@ -6,6 +6,11 @@ $base-color: #2196f3;
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin: 0 auto;
+    // justify-content: space-between;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

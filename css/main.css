@@ -63,6 +63,8 @@ ul {
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -132,6 +134,12 @@ ul {
     display: none;
   }
 }
+.menu--open__btn:hover {
+  fill: #2196f3;
+}
+.menu--open__btn:focus {
+  fill: #2196f3;
+}
 
 .menu-close__btn {
   display: block;
@@ -143,11 +151,10 @@ ul {
   top: 10px;
   right: 15px;
 }
-
-.menu__button--icon:hover {
+.menu-close__btn:hover {
   fill: #2196f3;
 }
-.menu__button--icon:focus {
+.menu-close__btn:focus {
   fill: #2196f3;
 }
 
@@ -177,6 +184,10 @@ ul {
   }
 }
 
+.menu-top {
+  width: 100%;
+}
+
 .mob--nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -192,6 +203,10 @@ ul {
   color: var(--main-color);
 }
 .mob--nav__link:focus {
+  color: var(--main-color);
+}
+
+.active-link {
   color: var(--main-color);
 }
 
@@ -250,11 +265,19 @@ ul {
   color: #2196f3;
 }
 
-.nav {
-  display: none;
-  margin-right: auto;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-grow: 1;
+  }
 }
 
+.nav__list {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .nav__list {
     display: flex;
@@ -463,7 +486,11 @@ ul {
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .feature__list {

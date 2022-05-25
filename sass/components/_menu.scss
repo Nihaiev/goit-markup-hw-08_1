@@ -1,12 +1,16 @@
 .menu--open__btn {
   display: inline-block;
   margin-left: auto;
-  // margin: 0;
-  // padding: 0;
   border: none;
   background-color: transparent;
   @media screen and (min-width: 768px) {
     display: none;
+  }
+  &:hover {
+    fill: #2196f3;
+  }
+  &:focus {
+    fill: #2196f3;
   }
 }
 .menu-close__btn {
@@ -18,9 +22,6 @@
   height: 40px;
   top: 10px;
   right: 15px;
-}
-
-.menu__button--icon {
   &:hover {
     fill: #2196f3;
   }
@@ -28,17 +29,6 @@
     fill: #2196f3;
   }
 }
-
-// .menu__button .menu__button--iconclose {
-//   display: none;
-// }
-
-// .menu__button.is-open .menu__button--iconclose {
-//   display: block;
-// }
-// .menu__button.is-open .menu__button--iconmenu {
-//   display: none;
-// }
 
 .mob--menu__container {
   position: fixed;
@@ -50,7 +40,6 @@
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
-
   .container {
     display: flex;
     flex-direction: column;
@@ -63,16 +52,11 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-  // @media screen and (min-width: 768px) {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   flex-grow: 1;
-  // }
 }
-.mob--nav {
+.menu-top {
+  width: 100%;
 }
-.mob--nav__list {
-}
+
 .mob--nav__item {
   &:not(:last-child) {
     margin-bottom: 32px;
@@ -87,16 +71,17 @@
   &:hover {
     color: var(--main-color);
   }
-
   &:focus {
     color: var(--main-color);
   }
 }
+.active-link {
+  color: var(--main-color);
+}
 .mob--contacts {
   margin-bottom: 64px;
 }
-.mob--connect {
-}
+
 .mob--connect__list {
   &:not(:last-child) {
     margin-bottom: 32px;
@@ -147,12 +132,16 @@
   color: #2196f3;
 }
 
-.nav {
-  display: none;
-  margin-right: auto;
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+  }
 }
 
 .nav__list {
+  display: none;
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -177,10 +166,6 @@
     color: var(--main-color);
   }
 }
-
-// .nav__item .link.current {
-//   color: var(--main-color);
-// }
 
 .nav__link {
   padding-top: 32px;
