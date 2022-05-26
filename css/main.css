@@ -130,6 +130,9 @@ ul {
   margin-left: auto;
   border: none;
   background-color: transparent;
+  transition-property: fill;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 @media screen and (min-width: 768px) {
   .menu--open__btn {
@@ -144,6 +147,7 @@ ul {
 }
 
 .menu-close__btn {
+  position: absolute;
   display: block;
   margin-left: auto;
   border: none;
@@ -152,6 +156,9 @@ ul {
   height: 40px;
   top: 10px;
   right: 15px;
+  transition-property: fill;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .menu-close__btn:hover {
   fill: #2196f3;
@@ -166,10 +173,14 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--typical-white-color);
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+  transition-property: translatey(0%);
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
+  transform: translatey(-50%, -50%) scale(1);
 }
 .mob--menu__container .container {
   display: flex;
@@ -200,6 +211,9 @@ ul {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
+  transition-property: color;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .mob--nav__link:hover {
   color: var(--main-color);
@@ -226,6 +240,9 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
+  transition-property: color;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .mob--connect__link:hover {
   color: var(--main-color);
@@ -264,7 +281,7 @@ ul {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: var(--main-color);
 }
 
 .navigation {
@@ -291,7 +308,7 @@ ul {
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--header-nav-color);
 }
 @media screen and (min-width: 768px) {
   .nav__item {

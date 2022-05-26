@@ -12,8 +12,12 @@
   &:focus {
     fill: #2196f3;
   }
+  transition-property: fill;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .menu-close__btn {
+  position: absolute;
   display: block;
   margin-left: auto;
   border: none;
@@ -28,6 +32,9 @@
   &:focus {
     fill: #2196f3;
   }
+  transition-property: fill;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 
 .mob--menu__container {
@@ -36,10 +43,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: var(--typical-white-color);
   z-index: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+  transition-property: translatey(0%);
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
+  transform: translatey(-50%, -50%) scale(1);
   .container {
     display: flex;
     flex-direction: column;
@@ -74,6 +85,9 @@
   &:focus {
     color: var(--main-color);
   }
+  transition-property: color;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .active-link {
   color: var(--main-color);
@@ -100,6 +114,9 @@
   &:focus {
     color: var(--main-color);
   }
+  transition-property: color;
+  transition-duration: var(--typical-time-transition);
+  transition-timing-function: var(--typical-cubic-bezier);
 }
 .phone_font {
   font-size: 34px;
@@ -129,7 +146,7 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
-  color: #2196f3;
+  color: var(--main-color);
 }
 
 .navigation {
@@ -152,7 +169,7 @@
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--header-nav-color);
   @media screen and (min-width: 768px) {
     font-weight: 500;
     font-size: 14px;
